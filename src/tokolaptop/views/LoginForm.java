@@ -30,95 +30,112 @@ public class LoginForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabelUsername = new javax.swing.JLabel();
-        jLabelPassword = new javax.swing.JLabel();
-        jLabelIdentitas = new javax.swing.JLabel();
         jTextFieldUsername = new javax.swing.JTextField();
+        jLabelPassword = new javax.swing.JLabel();
+        jPasswordFieldPassword = new javax.swing.JPasswordField();
         jButtonLogin = new javax.swing.JButton();
         jButtonSignup = new javax.swing.JButton();
-        jPasswordFieldPassword = new javax.swing.JPasswordField();
+        jLabelIdentitas = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
         setPreferredSize(new java.awt.Dimension(767, 517));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelUsername.setText("Username:");
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel1.setForeground(new java.awt.Color(0, 204, 204));
+        jPanel1.setAlignmentX(0.0F);
+        jPanel1.setAlignmentY(0.0F);
+        jPanel1.setPreferredSize(new java.awt.Dimension(990, 830));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelPassword.setText("Password:");
+        jLabelUsername.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabelUsername.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsername.setText("Username");
+        jPanel1.add(jLabelUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, -1, -1));
+        jLabelUsername.getAccessibleContext().setAccessibleName("jLabelUsername");
 
-        jLabelIdentitas.setText("GOOD GAMING STORE");
-
+        jTextFieldUsername.setBackground(new java.awt.Color(0, 204, 204));
+        jTextFieldUsername.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jTextFieldUsername.setForeground(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.setToolTipText("");
+        jTextFieldUsername.setActionCommand("<Not Set>");
+        jTextFieldUsername.setAlignmentX(0.0F);
+        jTextFieldUsername.setAlignmentY(0.0F);
+        jTextFieldUsername.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextFieldUsername.setCaretColor(new java.awt.Color(255, 255, 255));
+        jTextFieldUsername.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTextFieldUsername.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldUsernameActionPerformed(evt);
             }
         });
+        jPanel1.add(jTextFieldUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 310, 40));
 
-        jButtonLogin.setText("Login");
-        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLoginActionPerformed(evt);
-            }
-        });
+        jLabelPassword.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPassword.setText("Password");
+        jPanel1.add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 118, -1));
+        jLabelPassword.getAccessibleContext().setAccessibleName("jLabelPassword");
 
-        jButtonSignup.setText("Sign up");
-        jButtonSignup.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSignupActionPerformed(evt);
-            }
-        });
-
+        jPasswordFieldPassword.setBackground(new java.awt.Color(0, 204, 204));
+        jPasswordFieldPassword.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jPasswordFieldPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jPasswordFieldPassword.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jPasswordFieldPassword.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPasswordFieldPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jPasswordFieldPassword.setSelectionColor(new java.awt.Color(0, 204, 204));
         jPasswordFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldPasswordActionPerformed(evt);
             }
         });
+        jPanel1.add(jPasswordFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 310, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(246, 246, 246)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonLogin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonSignup))
-                    .addComponent(jLabelUsername)
-                    .addComponent(jTextFieldUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelPassword)
-                    .addComponent(jPasswordFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabelIdentitas)))
-                .addContainerGap(1510, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jLabelIdentitas)
-                .addGap(30, 30, 30)
-                .addComponent(jLabelUsername)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonLogin)
-                    .addComponent(jButtonSignup))
-                .addContainerGap(783, Short.MAX_VALUE))
-        );
+        jButtonLogin.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonLogin.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
+        jButtonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonLogin.setText("Login");
+        jButtonLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, 220, 60));
 
-        jLabelUsername.getAccessibleContext().setAccessibleName("jLabelUsername");
-        jLabelPassword.getAccessibleContext().setAccessibleName("jLabelPassword");
+        jButtonSignup.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonSignup.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
+        jButtonSignup.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSignup.setText("Sign up");
+        jButtonSignup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        jButtonSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSignupActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 620, 220, 60));
+
+        jLabelIdentitas.setFont(new java.awt.Font("Calibri", 0, 48)); // NOI18N
+        jLabelIdentitas.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIdentitas.setText("GOOD GAMING STORE");
+        jLabelIdentitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
         jLabelIdentitas.getAccessibleContext().setAccessibleName("jLabelIdentitas");
 
-        pack();
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 1020));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(990, 830));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 1100, 1020));
+
+        setSize(new java.awt.Dimension(1544, 837));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
@@ -186,6 +203,8 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIdentitas;
     private javax.swing.JLabel jLabelPassword;
     private javax.swing.JLabel jLabelUsername;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordFieldPassword;
     private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
