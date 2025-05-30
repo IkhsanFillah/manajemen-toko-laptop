@@ -44,6 +44,9 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabelId = new javax.swing.JLabel();
         jTextFieldId = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanelList = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -51,6 +54,10 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabelIdentitas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelAdjust.setBackground(new java.awt.Color(102, 204, 255));
+        jPanelAdjust.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonTambah.setText("Tambah Laptop");
         jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
@@ -58,22 +65,33 @@ public class HalamanUtama extends javax.swing.JFrame {
                 jButtonTambahActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 680, -1, -1));
 
         jLabelMerek.setText("Merek :");
+        jPanelAdjust.add(jLabelMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 48, -1));
 
         jLabelModel.setText("Model :");
+        jPanelAdjust.add(jLabelModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
 
         jLabelSpesifikasi.setText("Spesifikasi :");
+        jPanelAdjust.add(jLabelSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 65, -1));
 
         jLabelHarga.setText("Harga :");
+        jPanelAdjust.add(jLabelHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
 
         jLabelStok.setText("Stok :");
+        jPanelAdjust.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 570, 37, -1));
 
         jTextFieldMerek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldMerekActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jTextFieldMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 246, -1));
+        jPanelAdjust.add(jTextFieldModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 246, -1));
+        jPanelAdjust.add(jTextFieldSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 246, -1));
+        jPanelAdjust.add(jTextFieldHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 246, -1));
+        jPanelAdjust.add(jTextFieldStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 246, -1));
 
         jButtonDelete.setText("Delete");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +99,7 @@ public class HalamanUtama extends javax.swing.JFrame {
                 jButtonDeleteActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, -1, -1));
 
         jButtonEdit.setText("Edit");
         jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +107,7 @@ public class HalamanUtama extends javax.swing.JFrame {
                 jButtonEditActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 640, -1, -1));
 
         jButtonClear.setText("Clear");
         jButtonClear.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +115,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                 jButtonClearActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, -1, -1));
 
         jLabelId.setText("ID :");
+        jPanelAdjust.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 37, -1));
+        jPanelAdjust.add(jTextFieldId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 246, -1));
 
         jButton1.setText("Convert .txt");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,80 +127,20 @@ public class HalamanUtama extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanelAdjust.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 680, -1, -1));
 
-        javax.swing.GroupLayout jPanelAdjustLayout = new javax.swing.GroupLayout(jPanelAdjust);
-        jPanelAdjust.setLayout(jPanelAdjustLayout);
-        jPanelAdjustLayout.setHorizontalGroup(
-            jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAdjustLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelAdjustLayout.createSequentialGroup()
-                        .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanelAdjustLayout.createSequentialGroup()
-                                .addComponent(jButtonDelete)
-                                .addGap(9, 9, 9)
-                                .addComponent(jButtonEdit)
-                                .addGap(9, 9, 9)
-                                .addComponent(jButtonClear))
-                            .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextFieldStok, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                                .addComponent(jTextFieldHarga, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextFieldSpesifikasi, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelStok, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextFieldMerek, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jButton1))
-                        .addContainerGap(54, Short.MAX_VALUE))
-                    .addGroup(jPanelAdjustLayout.createSequentialGroup()
-                        .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonTambah)
-                            .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelSpesifikasi, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelHarga)
-                            .addComponent(jLabelModel)
-                            .addComponent(jLabelMerek, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        jPanelAdjustLayout.setVerticalGroup(
-            jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAdjustLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabelId)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addComponent(jLabelMerek)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldMerek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelModel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelSpesifikasi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldSpesifikasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelHarga)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldHarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelStok)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonClear)
-                    .addComponent(jButtonEdit)
-                    .addComponent(jButtonDelete))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelAdjustLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonTambah)
-                    .addComponent(jButton1))
-                .addGap(21, 21, 21))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/icons8_Account_50px (2).png"))); // NOI18N
+        jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
+
+        jLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Welcome Admin");
+        jPanelAdjust.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+
+        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jPanelAdjust.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 260, 20));
+
+        getContentPane().add(jPanelAdjust, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 3, 320, 1080));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -205,52 +168,32 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
 
-        jLabelIdentitas.setText("GOOD GAMING SHOP");
+        jLabelIdentitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/20250530_135429.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelListLayout = new javax.swing.GroupLayout(jPanelList);
         jPanelList.setLayout(jPanelListLayout);
         jPanelListLayout.setHorizontalGroup(
             jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelListLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
+                .addGap(0, 22, Short.MAX_VALUE)
                 .addGroup(jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelIdentitas)
-                    .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1098, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanelListLayout.setVerticalGroup(
             jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelIdentitas)
                 .addGap(18, 18, 18)
-                .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
+                .addComponent(jLabelIdentitas, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jPanelList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelAdjust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(960, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelAdjust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(489, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanelList, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -4, 1120, 1090));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -424,6 +367,9 @@ public class HalamanUtama extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonEdit;
     private javax.swing.JButton jButtonTambah;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelHarga;
     private javax.swing.JLabel jLabelId;
     private javax.swing.JLabel jLabelIdentitas;
