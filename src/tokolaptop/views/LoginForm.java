@@ -5,6 +5,7 @@
 package tokolaptop.views;
 
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import tokolaptop.helper.DBHelper;
 
@@ -20,6 +21,79 @@ public class LoginForm extends javax.swing.JFrame {
     public LoginForm() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        //textFiledusername
+        jTextFieldUsername.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(15, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        
+        //jtextfieldpassword
+        jPasswordFieldPassword.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK);
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30);
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(20, 15, 5, 10);
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8,8,8,8);
+            return insets;
+            }
+        });
+        
+        //button login dan signup
+        jButtonLogin.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(new java.awt.Color(51, 102, 255));
+            g2.fillRoundRect(x, y, width - 1, height - 1, 30, 30);
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 20, 10, 20);
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(10, 20, 10, 20);
+            return insets;
+            }
+        });    
+        
+        
+        jButtonLogin.setContentAreaFilled(true); // hindari background default
+        jButtonLogin.setBorderPainted(false);     // kita menggambar border sendiri
+        jButtonLogin.setForeground(Color.WHITE);  // warna teks
+        jButtonSignup.setContentAreaFilled(false);
     }
 
     /**
@@ -53,13 +127,12 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(990, 830));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextFieldUsername.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jTextFieldUsername.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldUsername.setFont(new java.awt.Font("Candara Light", 0, 18)); // NOI18N
+        jTextFieldUsername.setForeground(new java.awt.Color(102, 102, 102));
+        jTextFieldUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldUsername.setToolTipText("");
         jTextFieldUsername.setActionCommand("<Not Set>");
-        jTextFieldUsername.setAlignmentX(0.0F);
         jTextFieldUsername.setAlignmentY(0.0F);
-        jTextFieldUsername.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldUsername.setCaretColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.setSelectionColor(new java.awt.Color(255, 255, 255));
@@ -68,20 +141,20 @@ public class LoginForm extends javax.swing.JFrame {
                 jTextFieldUsernameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextFieldUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 360, 40));
+        jPanel1.add(jTextFieldUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, 330, 50));
 
         jPasswordFieldPassword.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jPasswordFieldPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jPasswordFieldPassword.setForeground(new java.awt.Color(102, 102, 102));
         jPasswordFieldPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPasswordFieldPassword.setCaretColor(new java.awt.Color(255, 255, 255));
         jPasswordFieldPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jPasswordFieldPassword.setSelectionColor(new java.awt.Color(0, 204, 204));
+        jPasswordFieldPassword.setSelectionColor(new java.awt.Color(255, 255, 255));
         jPasswordFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 620, 360, 40));
+        jPanel1.add(jPasswordFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 560, 330, 50));
 
         jButtonLogin.setBackground(new java.awt.Color(51, 102, 255));
         jButtonLogin.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
@@ -93,11 +166,10 @@ public class LoginForm extends javax.swing.JFrame {
                 jButtonLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 690, 170, 50));
+        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 620, 170, 50));
 
-        jButtonSignup.setBackground(new java.awt.Color(51, 102, 255));
-        jButtonSignup.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
-        jButtonSignup.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSignup.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
+        jButtonSignup.setForeground(new java.awt.Color(51, 153, 255));
         jButtonSignup.setText("Sign up");
         jButtonSignup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jButtonSignup.addActionListener(new java.awt.event.ActionListener() {
@@ -105,35 +177,35 @@ public class LoginForm extends javax.swing.JFrame {
                 jButtonSignupActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 750, 170, 50));
+        jPanel1.add(jButtonSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 670, 130, 40));
 
         jLabelIdentitas.setBackground(new java.awt.Color(51, 102, 255));
         jLabelIdentitas.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
         jLabelIdentitas.setText("Admin please login into your account!");
         jLabelIdentitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 430, 40));
+        jPanel1.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 430, 40));
         jLabelIdentitas.getAccessibleContext().setAccessibleName("jLabelIdentitas");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/20250530_135429.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\20250530_135429.png"));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 180, 100));
 
         jLabelIdentitas1.setBackground(new java.awt.Color(51, 102, 255));
         jLabelIdentitas1.setFont(new java.awt.Font("Gadugi", 0, 36)); // NOI18N
         jLabelIdentitas1.setText("Welcome to Gstore");
         jLabelIdentitas1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabelIdentitas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 450, 50));
+        jPanel1.add(jLabelIdentitas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 450, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 1080));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 1080));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(990, 830));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/download (1) (1).jpg"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 720, 470));
+        jLabel4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\download (1) (1).jpg"));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 720, 470));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 770, 1080));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 0, 1140, 1080));
 
         setSize(new java.awt.Dimension(1456, 1089));
         setLocationRelativeTo(null);
