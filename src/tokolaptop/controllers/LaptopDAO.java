@@ -17,7 +17,7 @@ public class LaptopDAO {
         return DBHelper.updateLaptop(l);
     }
     
-    public static boolean delete(int id){
+    public static boolean delete(String id){
         return DBHelper.deleteLaptop(id);
     }
 }

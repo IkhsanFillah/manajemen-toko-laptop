@@ -92,10 +92,10 @@ public class DBHelper {
         }
     }
     
-    public static boolean deleteLaptop(int id){
+    public static boolean deleteLaptop(String id){
         String sql = "DELETE FROM laptop WHERE id=?";
         try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)){
-            ps.setInt(1, id);
+            ps.setString(1, id);
             return ps.executeUpdate() > 0;
         } catch (Exception e) {
             return false;

@@ -2,10 +2,14 @@ package tokolaptop.views;
 
 import java.awt.Component;
 import java.awt.FlowLayout;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import tokolaptop.controllers.LaptopDAO;
 import javax.swing.*;
 import java.util.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
@@ -43,7 +47,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonClear = new javax.swing.JButton();
         jLabelId = new javax.swing.JLabel();
         jTextFieldId = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButtonConvertTxt = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -68,19 +72,19 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanelAdjust.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 680, -1, -1));
 
         jLabelMerek.setText("Merek :");
-        jPanelAdjust.add(jLabelMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 48, -1));
+        jPanelAdjust.add(jLabelMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 48, -1));
 
         jLabelModel.setText("Model :");
-        jPanelAdjust.add(jLabelModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
+        jPanelAdjust.add(jLabelModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
         jLabelSpesifikasi.setText("Spesifikasi :");
-        jPanelAdjust.add(jLabelSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 65, -1));
+        jPanelAdjust.add(jLabelSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, -1));
 
         jLabelHarga.setText("Harga :");
-        jPanelAdjust.add(jLabelHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
+        jPanelAdjust.add(jLabelHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
 
         jLabelStok.setText("Stok :");
-        jPanelAdjust.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 570, 37, -1));
+        jPanelAdjust.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 37, -1));
 
         jTextFieldMerek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,16 +122,16 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanelAdjust.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, -1, -1));
 
         jLabelId.setText("ID :");
-        jPanelAdjust.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 37, -1));
+        jPanelAdjust.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 37, -1));
         jPanelAdjust.add(jTextFieldId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 246, -1));
 
-        jButton1.setText("Convert .txt");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonConvertTxt.setText("Convert .txt");
+        jButtonConvertTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonConvertTxtActionPerformed(evt);
             }
         });
-        jPanelAdjust.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 680, -1, -1));
+        jPanelAdjust.add(jButtonConvertTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 680, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/icons8_Account_50px (2).png"))); // NOI18N
         jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
@@ -175,20 +179,21 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanelListLayout.setHorizontalGroup(
             jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
-                .addGap(0, 22, Short.MAX_VALUE)
+                .addGap(0, 16, Short.MAX_VALUE)
                 .addGroup(jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelIdentitas)
                     .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1098, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1098, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanelListLayout.setVerticalGroup(
             jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(21, 21, 21)
                 .addComponent(jLabelIdentitas, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -257,37 +262,61 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void jButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditActionPerformed
         try {
-            String id = jTextFieldId.getText();
-            String merek = jTextFieldMerek.getText();
-            String model = jTextFieldModel.getText();
-            String spek = jTextFieldSpesifikasi.getText();
-            double harga = Double.parseDouble(jTextFieldHarga.getText());
-            int stok = Integer.parseInt(jTextFieldStok.getText());
+            String id = jTextFieldId.getText().trim();
+            String merek = jTextFieldMerek.getText().trim();
+            String model = jTextFieldModel.getText().trim();
+            String spek = jTextFieldSpesifikasi.getText().trim();
+            String hargaText = jTextFieldHarga.getText().trim();
+            String stokText = jTextFieldStok.getText().trim();
+
+            // Validasi input kosong
+            if (id.isEmpty() || merek.isEmpty() || model.isEmpty() || hargaText.isEmpty() || stokText.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Semua field harus diisi.");
+                return;
+            }
+
+            // Bersihkan format harga (hapus koma dan titik)
+            String cleanHarga = hargaText.replace(",", "").replace(".", "");
+            double harga = Double.parseDouble(cleanHarga);
+            int stok = Integer.parseInt(stokText);
 
             Laptop l = new Laptop(id, merek, model, spek, harga, stok);
             if (LaptopDAO.update(l)) {
                 JOptionPane.showMessageDialog(this, "Data berhasil diperbarui.");
                 loadTable();
                 clearForm();
+            } else {
+                JOptionPane.showMessageDialog(this, "Gagal memperbarui data.");
             }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Format harga atau stok tidak valid.");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Input tidak valid.");
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
         }
     }//GEN-LAST:event_jButtonEditActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         try {
-            int id = Integer.parseInt(jTextFieldId.getText());
+            String id = jTextFieldId.getText().trim();
+
+            if (id.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Pilih data yang ingin dihapus.");
+                return;
+            }
+
             int confirm = JOptionPane.showConfirmDialog(this, "Hapus data ini?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
+                // Karena ID di database adalah varchar, gunakan String
                 if (LaptopDAO.delete(id)) {
                     JOptionPane.showMessageDialog(this, "Data berhasil dihapus.");
                     loadTable();
                     clearForm();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Gagal menghapus data.");
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Pilih data yang ingin dihapus.");
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
         }
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
@@ -299,10 +328,132 @@ public class HalamanUtama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldMerekActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButtonConvertTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertTxtActionPerformed
+        try {
+            // Ambil semua data laptop
+            java.util.List<Laptop> laptops = LaptopDAO.getAll();
 
+            if (laptops.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Tidak ada data untuk dikonversi.", "Info", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+
+            // Buka dialog file chooser untuk memilih lokasi penyimpanan
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Simpan File TXT");
+
+            // Set default nama file dengan timestamp
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+            String defaultFileName = "data_laptop_" + sdf.format(new Date()) + ".txt";
+            fileChooser.setSelectedFile(new java.io.File(defaultFileName));
+
+            // Set filter untuk file .txt
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files (*.txt)", "txt");
+            fileChooser.setFileFilter(filter);
+
+            int userSelection = fileChooser.showSaveDialog(this);
+
+            if (userSelection == JFileChooser.APPROVE_OPTION) {
+                java.io.File fileToSave = fileChooser.getSelectedFile();
+
+                // Pastikan ekstensi .txt
+                if (!fileToSave.getAbsolutePath().endsWith(".txt")) {
+                    fileToSave = new java.io.File(fileToSave.getAbsolutePath() + ".txt");
+                }
+
+                // Tulis data ke file
+                writeDataToTxtFile(laptops, fileToSave);
+
+                // Tampilkan pop-up sukses
+                int option = JOptionPane.showOptionDialog(
+                    this,
+                    "Data berhasil dikonversi ke file TXT!\n" +
+                    "File disimpan di: " + fileToSave.getAbsolutePath() + "\n\n" +
+                    "Apakah Anda ingin membuka folder file tersebut?",
+                    "Konversi Berhasil",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    new String[]{"Buka Folder", "Tutup"},
+                    "Buka Folder"
+                );
+
+                // Jika user pilih "Buka Folder"
+                if (option == JOptionPane.YES_OPTION) {
+                    try {
+                        // Buka folder tempat file disimpan
+                        java.awt.Desktop.getDesktop().open(fileToSave.getParentFile());
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(this, "Tidak dapat membuka folder: " + e.getMessage());
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error saat konversi: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButtonConvertTxtActionPerformed
+
+    private void writeDataToTxtFile(java.util.List<Laptop> laptops, java.io.File file) throws IOException {
+        try (FileWriter writer = new FileWriter(file)) {
+            // Header file
+            writer.write("=".repeat(100) + "\n");
+            writer.write("                      DATA LAPTOP TOKO LAPTOP\n");
+            writer.write("=".repeat(100) + "\n");
+            writer.write("Tanggal Export: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()) + "\n");
+            writer.write("Total Data: " + laptops.size() + " laptop(s)\n");
+            writer.write("=".repeat(100) + "\n\n");
+
+            // Format header tabel
+            writer.write(String.format("%-10s %-15s %-20s %-30s %-15s %-8s\n", 
+                         "ID", "MEREK", "MODEL", "SPESIFIKASI", "HARGA", "STOK"));
+            writer.write("-".repeat(100) + "\n");
+
+            // Data laptop
+            DecimalFormat df = new DecimalFormat("#,###");
+            int counter = 1;
+
+            for (Laptop laptop : laptops) {
+                writer.write(String.format("%-10s %-15s %-20s %-30s %-15s %-8d\n",
+                    laptop.getId(),
+                    truncateString(laptop.getMerek(), 15),
+                    truncateString(laptop.getModel(), 20),
+                    truncateString(laptop.getSpesifikasi(), 30),
+                    "Rp " + df.format(laptop.getHarga()),
+                    laptop.getStok()
+                ));
+
+                // Tambah separator setiap 10 data untuk readability
+                if (counter % 10 == 0 && counter < laptops.size()) {
+                    writer.write("-".repeat(100) + "\n");
+                }
+                counter++;
+            }
+
+            // Footer
+            writer.write("\n" + "=".repeat(100) + "\n");
+            writer.write("                        GStore\n");
+            writer.write("=".repeat(100) + "\n");
+
+            // Statistik sederhana
+            double totalHarga = laptops.stream().mapToDouble(Laptop::getHarga).sum();
+            int totalStok = laptops.stream().mapToInt(Laptop::getStok).sum();
+
+            writer.write("\nSTATISTIK:\n");
+            writer.write("- Total Laptop: " + laptops.size() + " jenis\n");
+            writer.write("- Total Stok: " + totalStok + " unit\n");
+            writer.write("- Total Nilai Inventori: Rp " + df.format(totalHarga) + "\n");
+            writer.write("- Rata-rata Harga: Rp " + df.format(totalHarga / laptops.size()) + "\n");
+        }
+    }
+
+    private String truncateString(String str, int maxLength) {
+        if (str == null) return "";
+        if (str.length() <= maxLength) return str;
+        return str.substring(0, maxLength - 3) + "...";
+    }
+    
     private void clearForm() {
         jTextFieldId.setText("");
         jTextFieldMerek.setText("");
@@ -315,14 +466,33 @@ public class HalamanUtama extends javax.swing.JFrame {
     
     private void setTableSelectionListener() {
         jTable1.getSelectionModel().addListSelectionListener(e -> {
-            int row = jTable1.getSelectedRow();
-            if (row >= 0) {
-                jTextFieldId.setText(jTable1.getValueAt(row, 0).toString());
-                jTextFieldMerek.setText(jTable1.getValueAt(row, 1).toString());
-                jTextFieldModel.setText(jTable1.getValueAt(row, 2).toString());
-                jTextFieldSpesifikasi.setText(jTable1.getValueAt(row, 3).toString());
-                jTextFieldHarga.setText(jTable1.getValueAt(row, 4).toString());
-                jTextFieldStok.setText(jTable1.getValueAt(row, 5).toString());
+            if (!e.getValueIsAdjusting()) { // Hindari multiple trigger
+                int row = jTable1.getSelectedRow();
+                if (row >= 0) {
+                    // Ambil data dari tabel
+                    Object idObj = jTable1.getValueAt(row, 0);
+                    Object merekObj = jTable1.getValueAt(row, 1);
+                    Object modelObj = jTable1.getValueAt(row, 2);
+                    Object spekObj = jTable1.getValueAt(row, 3);
+                    Object hargaObj = jTable1.getValueAt(row, 4);
+                    Object stokObj = jTable1.getValueAt(row, 5);
+
+                    // Set ke text field dengan null check
+                    jTextFieldId.setText(idObj != null ? idObj.toString() : "");
+                    jTextFieldMerek.setText(merekObj != null ? merekObj.toString() : "");
+                    jTextFieldModel.setText(modelObj != null ? modelObj.toString() : "");
+                    jTextFieldSpesifikasi.setText(spekObj != null ? spekObj.toString() : "");
+
+                    // Untuk harga, hilangkan format koma agar bisa di-edit
+                    if (hargaObj != null) {
+                        String hargaStr = hargaObj.toString().replace(",", "");
+                        jTextFieldHarga.setText(hargaStr);
+                    } else {
+                        jTextFieldHarga.setText("");
+                    }
+
+                    jTextFieldStok.setText(stokObj != null ? stokObj.toString() : "");
+                }
             }
         });
     }
@@ -362,8 +532,8 @@ public class HalamanUtama extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonClear;
+    private javax.swing.JButton jButtonConvertTxt;
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonEdit;
     private javax.swing.JButton jButtonTambah;
