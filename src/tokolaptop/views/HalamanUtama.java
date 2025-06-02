@@ -12,6 +12,7 @@ import javax.swing.*;
 import java.util.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 import tokolaptop.models.Laptop;
@@ -66,6 +67,11 @@ public class HalamanUtama extends javax.swing.JFrame {
             return insets;
             }
         });
+        
+        jScrollPane1.setOpaque(false);
+        JTableHeader header = jTable1.getTableHeader();
+        header.setBackground(Color.red);
+        
         
         jPanel2.setBorder(new javax.swing.border.AbstractBorder() {
         @Override
@@ -214,6 +220,70 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
         
+        jButtonDelete.setBorderPainted(false);
+        jButtonDelete.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonDelete.setBackground(new Color(255,102,102)); // Warna saat hover
+            }
+
+        @Override
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonDelete.setBackground(new Color(153,0,0)); // Kembali ke warna awal
+            }
+        });
+        
+        jButtonEdit.setBorderPainted(false);
+        jButtonEdit.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonEdit.setBackground(new Color(51,204,0)); // Warna saat hover
+            }
+
+        @Override
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonEdit.setBackground(new Color(0,102,0)); // Kembali ke warna awal
+            }
+        });
+        
+        jButtonTambah.setBorderPainted(false);
+        jButtonTambah.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonTambah.setBackground(new Color(51,204,255)); // Warna saat hover
+            }
+
+        @Override
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonTambah.setBackground(new Color(0,51,153)); // Kembali ke warna awal
+            }
+        });
+        
+        jButtonClear.setBorderPainted(false);
+        jButtonClear.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonClear.setBackground(new Color(204,0,204)); // Warna saat hover
+            }
+
+        @Override
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonClear.setBackground(new Color(102,0,102)); // Kembali ke warna awal
+            }
+        });
+        
+        jButtonConvertTxt.setBorderPainted(false);
+        jButtonConvertTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonConvertTxt.setBackground(new Color(153,153,153)); // Warna saat hover
+            }
+
+        @Override
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonConvertTxt.setBackground(new Color(102,102,102)); // Kembali ke warna awal
+            }
+        });
         
     }
 
@@ -256,19 +326,19 @@ public class HalamanUtama extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanelAdjust.setBackground(new java.awt.Color(102, 204, 255));
+        jPanelAdjust.setBackground(new java.awt.Color(0, 102, 204));
         jPanelAdjust.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\icons8_Account_50px (2).png"));
-        jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 160, 160));
+        jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 160, 160));
 
-        jLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Welcome Admin");
-        jPanelAdjust.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+        jPanelAdjust.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jPanelAdjust.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 260, 30));
+        jPanelAdjust.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 260, 30));
 
         getContentPane().add(jPanelAdjust, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 1080));
 
@@ -291,6 +361,9 @@ public class HalamanUtama extends javax.swing.JFrame {
         });
         jPanel1.add(jTextFieldCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 246, 40));
 
+        jScrollPane1.setColumnHeaderView(null);
+        jScrollPane1.setRowHeaderView(null);
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -302,6 +375,12 @@ public class HalamanUtama extends javax.swing.JFrame {
                 "id", "merek", "model", "spesifikasi", "harga", "stok"
             }
         ));
+        jTable1.setCellSelectionEnabled(true);
+        jTable1.setShowGrid(false);
+        jTable1.setShowHorizontalLines(false);
+        jTable1.setShowVerticalLines(false);
+        jTable1.getTableHeader().setResizingAllowed(false);
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(40);
@@ -318,7 +397,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelIdentitas.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\20250530_135429.png"));
-        jPanel2.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 280, 175, 98));
+        jPanel2.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 300, 175, 98));
 
         jLabelId.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelId.setText("ID :");
@@ -356,45 +435,55 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanel2.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 60, -1));
         jPanel2.add(jTextFieldStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 246, 40));
 
+        jButtonDelete.setBackground(new java.awt.Color(153, 0, 0));
+        jButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
         jButtonDelete.setText("Delete");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
+        jPanel2.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 200, 40));
 
+        jButtonEdit.setBackground(new java.awt.Color(0, 102, 0));
+        jButtonEdit.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEdit.setText("Edit");
         jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEditActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, -1, -1));
+        jPanel2.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 200, 40));
 
+        jButtonClear.setBackground(new java.awt.Color(102, 0, 102));
+        jButtonClear.setForeground(new java.awt.Color(255, 255, 255));
         jButtonClear.setText("Clear");
         jButtonClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonClearActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, -1, -1));
+        jPanel2.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 200, 40));
 
+        jButtonTambah.setBackground(new java.awt.Color(0, 51, 153));
+        jButtonTambah.setForeground(new java.awt.Color(255, 255, 255));
         jButtonTambah.setText("Tambah Laptop");
         jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTambahActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
+        jPanel2.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 200, 40));
 
+        jButtonConvertTxt.setBackground(new java.awt.Color(153, 153, 153));
+        jButtonConvertTxt.setForeground(new java.awt.Color(255, 255, 255));
         jButtonConvertTxt.setText("Convert .txt");
         jButtonConvertTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConvertTxtActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonConvertTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, -1, -1));
+        jPanel2.add(jButtonConvertTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 200, 40));
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 1040, 420));
 
