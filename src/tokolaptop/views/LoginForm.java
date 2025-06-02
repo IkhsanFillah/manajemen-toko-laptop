@@ -140,7 +140,7 @@ public class LoginForm extends javax.swing.JFrame {
                 jTextFieldUsernameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextFieldUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 330, 50));
+        jPanel1.add(jTextFieldUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 330, 50));
 
         jPasswordFieldPassword.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
         jPasswordFieldPassword.setForeground(new java.awt.Color(102, 102, 102));
@@ -153,7 +153,7 @@ public class LoginForm extends javax.swing.JFrame {
                 jPasswordFieldPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 330, 50));
+        jPanel1.add(jPasswordFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 510, 330, 50));
 
         jButtonLogin.setBackground(new java.awt.Color(51, 102, 255));
         jButtonLogin.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
@@ -165,7 +165,7 @@ public class LoginForm extends javax.swing.JFrame {
                 jButtonLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 170, 50));
+        jPanel1.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 170, 50));
 
         jButtonSignup.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         jButtonSignup.setForeground(new java.awt.Color(51, 153, 255));
@@ -176,13 +176,13 @@ public class LoginForm extends javax.swing.JFrame {
                 jButtonSignupActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, 130, 40));
+        jPanel1.add(jButtonSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 630, 130, 40));
 
         jLabelIdentitas.setBackground(new java.awt.Color(51, 102, 255));
         jLabelIdentitas.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
         jLabelIdentitas.setText("Admin please login into your account!");
         jLabelIdentitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 430, 40));
+        jPanel1.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 430, 40));
         jLabelIdentitas.getAccessibleContext().setAccessibleName("jLabelIdentitas");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\20250530_135429.png"));
@@ -192,10 +192,10 @@ public class LoginForm extends javax.swing.JFrame {
         jLabelIdentitas1.setFont(new java.awt.Font("Gadugi", 0, 36)); // NOI18N
         jLabelIdentitas1.setText("Welcome to Gstore");
         jLabelIdentitas1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabelIdentitas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 450, 50));
+        jPanel1.add(jLabelIdentitas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 450, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\download (1) (1).jpg"));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, 720, 470));
+        jLabel4.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\LoginFotoEdited.png"));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 920, 1080));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 1080));
 

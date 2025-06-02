@@ -1,5 +1,6 @@
 package tokolaptop.views;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.io.FileWriter;
@@ -23,39 +24,234 @@ public class HalamanUtama extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         loadTable();
         setTableSelectionListener();
+        
+        jPanel1.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldCari.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jPanel2.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldId.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldMerek.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldModel.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldSpesifikasi.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldHarga.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        jTextFieldStok.setBorder(new javax.swing.border.AbstractBorder() {
+        @Override
+        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
+            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
+            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(java.awt.Color.BLACK); // Warna border
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c) {
+            return new java.awt.Insets(10, 15, 10, 15); // Padding
+        }
+
+        @Override
+        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
+            insets.set(8, 8, 8, 8);
+            return insets;
+            }
+        });
+        
+        
     }
 
+    
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanelAdjust = new javax.swing.JPanel();
-        jButtonTambah = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jTextFieldCari = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabelIdentitas = new javax.swing.JLabel();
+        jLabelId = new javax.swing.JLabel();
+        jTextFieldId = new javax.swing.JTextField();
         jLabelMerek = new javax.swing.JLabel();
-        jLabelModel = new javax.swing.JLabel();
-        jLabelSpesifikasi = new javax.swing.JLabel();
-        jLabelHarga = new javax.swing.JLabel();
-        jLabelStok = new javax.swing.JLabel();
         jTextFieldMerek = new javax.swing.JTextField();
+        jLabelModel = new javax.swing.JLabel();
         jTextFieldModel = new javax.swing.JTextField();
+        jLabelSpesifikasi = new javax.swing.JLabel();
         jTextFieldSpesifikasi = new javax.swing.JTextField();
+        jLabelHarga = new javax.swing.JLabel();
         jTextFieldHarga = new javax.swing.JTextField();
+        jLabelStok = new javax.swing.JLabel();
         jTextFieldStok = new javax.swing.JTextField();
         jButtonDelete = new javax.swing.JButton();
         jButtonEdit = new javax.swing.JButton();
         jButtonClear = new javax.swing.JButton();
-        jLabelId = new javax.swing.JLabel();
-        jTextFieldId = new javax.swing.JTextField();
+        jButtonTambah = new javax.swing.JButton();
         jButtonConvertTxt = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanelList = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jTextFieldCari = new javax.swing.JTextField();
-        jLabelIdentitas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,78 +259,8 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanelAdjust.setBackground(new java.awt.Color(102, 204, 255));
         jPanelAdjust.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonTambah.setText("Tambah Laptop");
-        jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonTambahActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 680, -1, -1));
-
-        jLabelMerek.setText("Merek :");
-        jPanelAdjust.add(jLabelMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 48, -1));
-
-        jLabelModel.setText("Model :");
-        jPanelAdjust.add(jLabelModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
-
-        jLabelSpesifikasi.setText("Spesifikasi :");
-        jPanelAdjust.add(jLabelSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, -1));
-
-        jLabelHarga.setText("Harga :");
-        jPanelAdjust.add(jLabelHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
-
-        jLabelStok.setText("Stok :");
-        jPanelAdjust.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 37, -1));
-
-        jTextFieldMerek.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMerekActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jTextFieldMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 246, -1));
-        jPanelAdjust.add(jTextFieldModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 246, -1));
-        jPanelAdjust.add(jTextFieldSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 246, -1));
-        jPanelAdjust.add(jTextFieldHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 246, -1));
-        jPanelAdjust.add(jTextFieldStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 246, -1));
-
-        jButtonDelete.setText("Delete");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, -1, -1));
-
-        jButtonEdit.setText("Edit");
-        jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEditActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 640, -1, -1));
-
-        jButtonClear.setText("Clear");
-        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonClearActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, -1, -1));
-
-        jLabelId.setText("ID :");
-        jPanelAdjust.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 37, -1));
-        jPanelAdjust.add(jTextFieldId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 246, -1));
-
-        jButtonConvertTxt.setText("Convert .txt");
-        jButtonConvertTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConvertTxtActionPerformed(evt);
-            }
-        });
-        jPanelAdjust.add(jButtonConvertTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 680, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/icons8_Account_50px (2).png"))); // NOI18N
-        jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\icons8_Account_50px (2).png"));
+        jPanelAdjust.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 160, 160));
 
         jLabel2.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,9 +268,28 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanelAdjust.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
 
         jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jPanelAdjust.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 260, 20));
+        jPanelAdjust.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 260, 30));
 
-        getContentPane().add(jPanelAdjust, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 3, 320, 1080));
+        getContentPane().add(jPanelAdjust, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 1080));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setAlignmentX(0.5F);
+        jPanel1.setAlignmentY(0.5F);
+        jPanel1.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1440, 512));
+        jPanel1.setName(""); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextFieldCari.setText("Cari laptop");
+        jTextFieldCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCariActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextFieldCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 246, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,72 +310,98 @@ public class HalamanUtama extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(5).setPreferredWidth(40);
         }
 
-        jTextFieldCari.setText("Cari laptop");
-        jTextFieldCari.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 960, 380));
+
+        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 1040, 520));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelIdentitas.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\tokolaptop\\icon\\20250530_135429.png"));
+        jPanel2.add(jLabelIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 280, 175, 98));
+
+        jLabelId.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelId.setText("ID :");
+        jPanel2.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 37, -1));
+        jPanel2.add(jTextFieldId, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 246, 40));
+
+        jLabelMerek.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelMerek.setText("Merek :");
+        jPanel2.add(jLabelMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 70, -1));
+
+        jTextFieldMerek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCariActionPerformed(evt);
+                jTextFieldMerekActionPerformed(evt);
             }
         });
+        jPanel2.add(jTextFieldMerek, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 246, 40));
 
-        jLabelIdentitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tokolaptop/icon/20250530_135429.png"))); // NOI18N
+        jLabelModel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelModel.setText("Model :");
+        jPanel2.add(jLabelModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        jPanel2.add(jTextFieldModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 246, 40));
 
-        javax.swing.GroupLayout jPanelListLayout = new javax.swing.GroupLayout(jPanelList);
-        jPanelList.setLayout(jPanelListLayout);
-        jPanelListLayout.setHorizontalGroup(
-            jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
-                .addGap(0, 16, Short.MAX_VALUE)
-                .addGroup(jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelIdentitas)
-                    .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1098, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-        jPanelListLayout.setVerticalGroup(
-            jPanelListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabelIdentitas, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextFieldCari, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabelSpesifikasi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSpesifikasi.setText("Spesifikasi :");
+        jPanel2.add(jLabelSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 100, -1));
+        jPanel2.add(jTextFieldSpesifikasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 246, 40));
 
-        getContentPane().add(jPanelList, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -4, 1120, 1090));
+        jLabelHarga.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelHarga.setText("Harga :");
+        jPanel2.add(jLabelHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        jPanel2.add(jTextFieldHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 246, 40));
+
+        jLabelStok.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelStok.setText("Stok :");
+        jPanel2.add(jLabelStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 60, -1));
+        jPanel2.add(jTextFieldStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 246, 40));
+
+        jButtonDelete.setText("Delete");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
+
+        jButtonEdit.setText("Edit");
+        jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, -1, -1));
+
+        jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, -1, -1));
+
+        jButtonTambah.setText("Tambah Laptop");
+        jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTambahActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
+
+        jButtonConvertTxt.setText("Convert .txt");
+        jButtonConvertTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConvertTxtActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonConvertTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, -1, -1));
+
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 1040, 420));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1120, 1080));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextFieldCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCariActionPerformed
-        String keyword = jTextFieldCari.getText().trim().toLowerCase();
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0); // bersihkan tabel sebelum isi ulang
-
-        if (keyword.isEmpty()) {
-            loadTable(); // tampilkan semua data jika tidak ada kata kunci
-            return;
-        }
-
-        for (Laptop l : LaptopDAO.getAll()) {
-            // cek apakah keyword cocok di salah satu field
-            if (
-                l.getMerek().toLowerCase().contains(keyword) ||
-                l.getModel().toLowerCase().contains(keyword) ||
-                l.getSpesifikasi().toLowerCase().contains(keyword)
-            ) {
-                model.addRow(new Object[]{
-                    l.getId(),
-                    l.getMerek(),
-                    l.getModel(),
-                    l.getSpesifikasi(),
-                    l.getHarga(),
-                    l.getStok()
-                });
-            }
-        }
-    }//GEN-LAST:event_jTextFieldCariActionPerformed
 
     private void jButtonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTambahActionPerformed
         try {
@@ -395,6 +566,35 @@ public class HalamanUtama extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonConvertTxtActionPerformed
 
+    private void jTextFieldCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCariActionPerformed
+        String keyword = jTextFieldCari.getText().trim().toLowerCase();
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0); // bersihkan tabel sebelum isi ulang
+
+        if (keyword.isEmpty()) {
+            loadTable(); // tampilkan semua data jika tidak ada kata kunci
+            return;
+        }
+
+        for (Laptop l : LaptopDAO.getAll()) {
+            // cek apakah keyword cocok di salah satu field
+            if (
+                l.getMerek().toLowerCase().contains(keyword) ||
+                l.getModel().toLowerCase().contains(keyword) ||
+                l.getSpesifikasi().toLowerCase().contains(keyword)
+            ) {
+                model.addRow(new Object[]{
+                    l.getId(),
+                    l.getMerek(),
+                    l.getModel(),
+                    l.getSpesifikasi(),
+                    l.getHarga(),
+                    l.getStok()
+                });
+            }
+        }
+    }//GEN-LAST:event_jTextFieldCariActionPerformed
+
     private void writeDataToTxtFile(java.util.List<Laptop> laptops, java.io.File file) throws IOException {
         try (FileWriter writer = new FileWriter(file)) {
             // Header file
@@ -499,37 +699,37 @@ public class HalamanUtama extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new HalamanUtama().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(HalamanUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new HalamanUtama().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonClear;
@@ -547,8 +747,10 @@ public class HalamanUtama extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelModel;
     private javax.swing.JLabel jLabelSpesifikasi;
     private javax.swing.JLabel jLabelStok;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelAdjust;
-    private javax.swing.JPanel jPanelList;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextFieldCari;
