@@ -68,24 +68,16 @@ public class LoginForm extends javax.swing.JFrame {
         });
         
         //button login dan signup
-        jButtonLogin.setBorder(new javax.swing.border.AbstractBorder() {
+        jButtonLogin.setBorderPainted(false);
+        jButtonLogin.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
-        public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
-            java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
-            g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(new java.awt.Color(51, 102, 255));
-            g2.fillRoundRect(x, y, width - 1, height - 1, 30, 30);
-        }
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            jButtonLogin.setBackground(new Color(153,204,255)); 
+            }
 
         @Override
-        public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 20, 10, 20);
-        }
-
-        @Override
-        public java.awt.Insets getBorderInsets(java.awt.Component c, java.awt.Insets insets) {
-            insets.set(10, 20, 10, 20);
-            return insets;
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            jButtonLogin.setBackground(new Color(51,102,255)); 
             }
         });    
         
