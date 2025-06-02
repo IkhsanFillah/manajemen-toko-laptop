@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import tokolaptop.controllers.LaptopDAO;
+import tokolaptop.controllers.LaptopController;
 import javax.swing.*;
 import java.util.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -31,13 +31,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK);
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -52,13 +52,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -78,13 +78,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -99,13 +99,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -120,13 +120,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -141,13 +141,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -162,13 +162,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -184,12 +184,12 @@ public class HalamanUtama extends javax.swing.JFrame {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
             g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -204,13 +204,13 @@ public class HalamanUtama extends javax.swing.JFrame {
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
             java.awt.Graphics2D g2 = (java.awt.Graphics2D) g;
             g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(java.awt.Color.BLACK); // Warna border
-            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); // Sudut lengkung radius 15
+            g2.setColor(java.awt.Color.BLACK); 
+            g2.drawRoundRect(x, y, width - 1, height - 1, 30, 30); 
         }
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(10, 15, 10, 15); // Padding
+            return new java.awt.Insets(10, 15, 10, 15); 
         }
 
         @Override
@@ -224,12 +224,12 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonDelete.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
         public void mouseEntered(java.awt.event.MouseEvent evt) {
-            jButtonDelete.setBackground(new Color(255,102,102)); // Warna saat hover
+            jButtonDelete.setBackground(new Color(255,102,102)); 
             }
 
         @Override
         public void mouseExited(java.awt.event.MouseEvent evt) {
-            jButtonDelete.setBackground(new Color(153,0,0)); // Kembali ke warna awal
+            jButtonDelete.setBackground(new Color(153,0,0)); 
             }
         });
         
@@ -237,12 +237,12 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonEdit.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
         public void mouseEntered(java.awt.event.MouseEvent evt) {
-            jButtonEdit.setBackground(new Color(51,204,0)); // Warna saat hover
+            jButtonEdit.setBackground(new Color(51,204,0));
             }
 
         @Override
         public void mouseExited(java.awt.event.MouseEvent evt) {
-            jButtonEdit.setBackground(new Color(0,102,0)); // Kembali ke warna awal
+            jButtonEdit.setBackground(new Color(0,102,0)); 
             }
         });
         
@@ -250,12 +250,12 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonTambah.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
         public void mouseEntered(java.awt.event.MouseEvent evt) {
-            jButtonTambah.setBackground(new Color(51,204,255)); // Warna saat hover
+            jButtonTambah.setBackground(new Color(51,204,255)); 
             }
 
         @Override
         public void mouseExited(java.awt.event.MouseEvent evt) {
-            jButtonTambah.setBackground(new Color(0,51,153)); // Kembali ke warna awal
+            jButtonTambah.setBackground(new Color(0,51,153)); 
             }
         });
         
@@ -263,12 +263,12 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonClear.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
         public void mouseEntered(java.awt.event.MouseEvent evt) {
-            jButtonClear.setBackground(new Color(204,0,204)); // Warna saat hover
+            jButtonClear.setBackground(new Color(204,0,204)); 
             }
 
         @Override
         public void mouseExited(java.awt.event.MouseEvent evt) {
-            jButtonClear.setBackground(new Color(102,0,102)); // Kembali ke warna awal
+            jButtonClear.setBackground(new Color(102,0,102)); 
             }
         });
         
@@ -276,12 +276,12 @@ public class HalamanUtama extends javax.swing.JFrame {
         jButtonConvertTxt.addMouseListener(new java.awt.event.MouseAdapter() {
         @Override
         public void mouseEntered(java.awt.event.MouseEvent evt) {
-            jButtonConvertTxt.setBackground(new Color(153,153,153)); // Warna saat hover
+            jButtonConvertTxt.setBackground(new Color(153,153,153)); 
             }
 
         @Override
         public void mouseExited(java.awt.event.MouseEvent evt) {
-            jButtonConvertTxt.setBackground(new Color(102,102,102)); // Kembali ke warna awal
+            jButtonConvertTxt.setBackground(new Color(102,102,102)); 
             }
         });
         
@@ -346,8 +346,6 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setAlignmentX(0.5F);
-        jPanel1.setAlignmentY(0.5F);
         jPanel1.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         jPanel1.setMinimumSize(new java.awt.Dimension(1440, 512));
         jPanel1.setName(""); // NOI18N
@@ -377,8 +375,6 @@ public class HalamanUtama extends javax.swing.JFrame {
         ));
         jTable1.setCellSelectionEnabled(true);
         jTable1.setShowGrid(false);
-        jTable1.setShowHorizontalLines(false);
-        jTable1.setShowVerticalLines(false);
         jTable1.getTableHeader().setResizingAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
@@ -508,7 +504,7 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
 
             Laptop l = new Laptop(id, merek, model, spek, harga, stok);
-            if (LaptopDAO.insert(l)) {
+            if (LaptopController.insert(l)) {
                 JOptionPane.showMessageDialog(this, "Data berhasil ditambahkan.");
                 loadTable();
                 clearForm();
@@ -529,19 +525,17 @@ public class HalamanUtama extends javax.swing.JFrame {
             String hargaText = jTextFieldHarga.getText().trim();
             String stokText = jTextFieldStok.getText().trim();
 
-            // Validasi input kosong
             if (id.isEmpty() || merek.isEmpty() || model.isEmpty() || hargaText.isEmpty() || stokText.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Semua field harus diisi.");
                 return;
             }
 
-            // Bersihkan format harga (hapus koma dan titik)
             String cleanHarga = hargaText.replace(",", "").replace(".", "");
             double harga = Double.parseDouble(cleanHarga);
             int stok = Integer.parseInt(stokText);
 
             Laptop l = new Laptop(id, merek, model, spek, harga, stok);
-            if (LaptopDAO.update(l)) {
+            if (LaptopController.update(l)) {
                 JOptionPane.showMessageDialog(this, "Data berhasil diperbarui.");
                 loadTable();
                 clearForm();
@@ -566,8 +560,7 @@ public class HalamanUtama extends javax.swing.JFrame {
 
             int confirm = JOptionPane.showConfirmDialog(this, "Hapus data ini?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
-                // Karena ID di database adalah varchar, gunakan String
-                if (LaptopDAO.delete(id)) {
+                if (LaptopController.delete(id)) {
                     JOptionPane.showMessageDialog(this, "Data berhasil dihapus.");
                     loadTable();
                     clearForm();
@@ -590,24 +583,20 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void jButtonConvertTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertTxtActionPerformed
         try {
-            // Ambil semua data laptop
-            java.util.List<Laptop> laptops = LaptopDAO.getAll();
+            java.util.List<Laptop> laptops = LaptopController.getAll();
 
             if (laptops.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Tidak ada data untuk dikonversi.", "Info", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
-            // Buka dialog file chooser untuk memilih lokasi penyimpanan
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setDialogTitle("Simpan File TXT");
 
-            // Set default nama file dengan timestamp
             SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
             String defaultFileName = "data_laptop_" + sdf.format(new Date()) + ".txt";
             fileChooser.setSelectedFile(new java.io.File(defaultFileName));
 
-            // Set filter untuk file .txt
             FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files (*.txt)", "txt");
             fileChooser.setFileFilter(filter);
 
@@ -616,15 +605,12 @@ public class HalamanUtama extends javax.swing.JFrame {
             if (userSelection == JFileChooser.APPROVE_OPTION) {
                 java.io.File fileToSave = fileChooser.getSelectedFile();
 
-                // Pastikan ekstensi .txt
                 if (!fileToSave.getAbsolutePath().endsWith(".txt")) {
                     fileToSave = new java.io.File(fileToSave.getAbsolutePath() + ".txt");
                 }
 
-                // Tulis data ke file
                 writeDataToTxtFile(laptops, fileToSave);
 
-                // Tampilkan pop-up sukses
                 int option = JOptionPane.showOptionDialog(
                     this,
                     "Data berhasil dikonversi ke file TXT!\n" +
@@ -638,10 +624,8 @@ public class HalamanUtama extends javax.swing.JFrame {
                     "Buka Folder"
                 );
 
-                // Jika user pilih "Buka Folder"
                 if (option == JOptionPane.YES_OPTION) {
                     try {
-                        // Buka folder tempat file disimpan
                         java.awt.Desktop.getDesktop().open(fileToSave.getParentFile());
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(this, "Tidak dapat membuka folder: " + e.getMessage());
@@ -658,15 +642,14 @@ public class HalamanUtama extends javax.swing.JFrame {
     private void jTextFieldCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCariActionPerformed
         String keyword = jTextFieldCari.getText().trim().toLowerCase();
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0); // bersihkan tabel sebelum isi ulang
+        model.setRowCount(0); 
 
         if (keyword.isEmpty()) {
-            loadTable(); // tampilkan semua data jika tidak ada kata kunci
+            loadTable(); 
             return;
         }
 
-        for (Laptop l : LaptopDAO.getAll()) {
-            // cek apakah keyword cocok di salah satu field
+        for (Laptop l : LaptopController.getAll()) {
             if (
                 l.getMerek().toLowerCase().contains(keyword) ||
                 l.getModel().toLowerCase().contains(keyword) ||
@@ -686,7 +669,6 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void writeDataToTxtFile(java.util.List<Laptop> laptops, java.io.File file) throws IOException {
         try (FileWriter writer = new FileWriter(file)) {
-            // Header file
             writer.write("=".repeat(100) + "\n");
             writer.write("                      DATA LAPTOP TOKO LAPTOP\n");
             writer.write("=".repeat(100) + "\n");
@@ -694,12 +676,10 @@ public class HalamanUtama extends javax.swing.JFrame {
             writer.write("Total Data: " + laptops.size() + " laptop(s)\n");
             writer.write("=".repeat(100) + "\n\n");
 
-            // Format header tabel
             writer.write(String.format("%-10s %-15s %-20s %-30s %-15s %-8s\n", 
                          "ID", "MEREK", "MODEL", "SPESIFIKASI", "HARGA", "STOK"));
             writer.write("-".repeat(100) + "\n");
 
-            // Data laptop
             DecimalFormat df = new DecimalFormat("#,###");
             int counter = 1;
 
@@ -713,19 +693,16 @@ public class HalamanUtama extends javax.swing.JFrame {
                     laptop.getStok()
                 ));
 
-                // Tambah separator setiap 10 data untuk readability
                 if (counter % 10 == 0 && counter < laptops.size()) {
                     writer.write("-".repeat(100) + "\n");
                 }
                 counter++;
             }
 
-            // Footer
             writer.write("\n" + "=".repeat(100) + "\n");
             writer.write("                        GStore\n");
             writer.write("=".repeat(100) + "\n");
 
-            // Statistik sederhana
             double totalHarga = laptops.stream().mapToDouble(Laptop::getHarga).sum();
             int totalStok = laptops.stream().mapToInt(Laptop::getStok).sum();
 
@@ -755,10 +732,9 @@ public class HalamanUtama extends javax.swing.JFrame {
     
     private void setTableSelectionListener() {
         jTable1.getSelectionModel().addListSelectionListener(e -> {
-            if (!e.getValueIsAdjusting()) { // Hindari multiple trigger
+            if (!e.getValueIsAdjusting()) { 
                 int row = jTable1.getSelectedRow();
                 if (row >= 0) {
-                    // Ambil data dari tabel
                     Object idObj = jTable1.getValueAt(row, 0);
                     Object merekObj = jTable1.getValueAt(row, 1);
                     Object modelObj = jTable1.getValueAt(row, 2);
@@ -766,13 +742,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                     Object hargaObj = jTable1.getValueAt(row, 4);
                     Object stokObj = jTable1.getValueAt(row, 5);
 
-                    // Set ke text field dengan null check
                     jTextFieldId.setText(idObj != null ? idObj.toString() : "");
                     jTextFieldMerek.setText(merekObj != null ? merekObj.toString() : "");
                     jTextFieldModel.setText(modelObj != null ? modelObj.toString() : "");
                     jTextFieldSpesifikasi.setText(spekObj != null ? spekObj.toString() : "");
 
-                    // Untuk harga, hilangkan format koma agar bisa di-edit
                     if (hargaObj != null) {
                         String hargaStr = hargaObj.toString().replace(",", "");
                         jTextFieldHarga.setText(hargaStr);
@@ -812,7 +786,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new HalamanUtama().setVisible(true);
@@ -853,17 +827,17 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void loadTable() {
         tableModel = (DefaultTableModel) jTable1.getModel();
-        tableModel.setRowCount(0); // bersihkan tabel sebelum isi ulang
+        tableModel.setRowCount(0); 
 
-        DecimalFormat df = new DecimalFormat("#,###"); // format angka ribuan
+        DecimalFormat df = new DecimalFormat("#,###"); 
 
-        for (Laptop l : LaptopDAO.getAll()) {
+        for (Laptop l : LaptopController.getAll()) {
             tableModel.addRow(new Object[]{
                 l.getId(),
                 l.getMerek(),
                 l.getModel(),
                 l.getSpesifikasi(),
-                df.format(l.getHarga()), // ✅ harga terformat
+                df.format(l.getHarga()), 
                 l.getStok()
             });
         }
