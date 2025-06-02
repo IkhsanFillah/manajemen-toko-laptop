@@ -68,6 +68,27 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
         
+        jTextFieldCari.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            if (jTextFieldCari.getText().equals("Cari laptop")) {
+                jTextFieldCari.setText("");
+                jTextFieldCari.setForeground(Color.BLACK);
+                }
+            }
+        });
+
+        // Untuk jaga-jaga jika user klik lalu keluar tanpa isi apa-apa
+        jTextFieldCari.addFocusListener(new java.awt.event.FocusAdapter() {
+        @Override
+        public void focusLost(java.awt.event.FocusEvent evt) {
+            if (jTextFieldCari.getText().isEmpty()) {
+                jTextFieldCari.setText("Username");
+                jTextFieldCari.setForeground(Color.GRAY);
+                }
+            }
+        });
+        
         jScrollPane1.setOpaque(false);
         JTableHeader header = jTable1.getTableHeader();
         header.setBackground(Color.red);

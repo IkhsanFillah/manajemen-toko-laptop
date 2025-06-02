@@ -6,8 +6,11 @@ package tokolaptop.views;
 
 
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.Insets;
 import javax.swing.JOptionPane;
 import tokolaptop.helper.DBHelper;
+import javax.swing.UIManager;
 
 /**
  *
@@ -44,8 +47,32 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
         
+        jTextFieldUsername.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            if (jTextFieldUsername.getText().equals("Username")) {
+                jTextFieldUsername.setText("");
+                jTextFieldUsername.setForeground(Color.BLACK);
+                }
+            }
+        });
+
+        // Untuk jaga-jaga jika user klik lalu keluar tanpa isi apa-apa
+        jTextFieldUsername.addFocusListener(new java.awt.event.FocusAdapter() {
+        @Override
+        public void focusLost(java.awt.event.FocusEvent evt) {
+            if (jTextFieldUsername.getText().isEmpty()) {
+                jTextFieldUsername.setText("Username");
+                jTextFieldUsername.setForeground(Color.GRAY);
+                }
+            }
+        });
         
         //jtextfieldpassword
+        jPasswordFieldPassword.setText("Password");
+        jPasswordFieldPassword.setFont(new Font("Candara Light", Font.PLAIN, 18));
+        jPasswordFieldPassword.setEchoChar((char) 0); // Tampilkan teks asli
+        
         jPasswordFieldPassword.setBorder(new javax.swing.border.AbstractBorder() {
         @Override
         public void paintBorder(java.awt.Component c, java.awt.Graphics g, int x, int y, int width, int height) {
@@ -57,7 +84,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         @Override
         public java.awt.Insets getBorderInsets(java.awt.Component c) {
-            return new java.awt.Insets(20, 15, 5, 10);
+            return new java.awt.Insets(10, 15, 5, 10);
         }
 
         @Override
@@ -66,6 +93,34 @@ public class LoginForm extends javax.swing.JFrame {
             return insets;
             }
         });
+        
+        jPasswordFieldPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            if (String.valueOf(jPasswordFieldPassword.getPassword()).equals("Password")) {
+                jPasswordFieldPassword.setText("");
+                // Ambil echo char default dari UIManager
+                jPasswordFieldPassword.setEchoChar(
+                    ((Character) UIManager.get("PasswordField.echoChar")).charValue()
+                    );
+                    jPasswordFieldPassword.setForeground(Color.BLACK);
+                }
+            }
+        });
+
+        // Fokus keluar: kembalikan placeholder jika kosong
+        jPasswordFieldPassword.addFocusListener(new java.awt.event.FocusAdapter() {
+            @Override
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                if (String.valueOf(jPasswordFieldPassword.getPassword()).isEmpty()) {
+                    jPasswordFieldPassword.setText("Password");
+                    jPasswordFieldPassword.setEchoChar((char) 0); // Tampilkan teks
+                    jPasswordFieldPassword.setForeground(Color.GRAY);
+                }
+            }
+        });
+        
+        
         
         //button login dan signup
         jButtonLogin.setBorderPainted(false);
@@ -121,10 +176,10 @@ public class LoginForm extends javax.swing.JFrame {
         jTextFieldUsername.setFont(new java.awt.Font("Candara Light", 0, 18)); // NOI18N
         jTextFieldUsername.setForeground(new java.awt.Color(102, 102, 102));
         jTextFieldUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldUsername.setText("Username");
         jTextFieldUsername.setToolTipText("");
         jTextFieldUsername.setActionCommand("<Not Set>");
         jTextFieldUsername.setAlignmentY(0.0F);
-        jTextFieldUsername.setCaretColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextFieldUsername.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +192,6 @@ public class LoginForm extends javax.swing.JFrame {
         jPasswordFieldPassword.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
         jPasswordFieldPassword.setForeground(new java.awt.Color(102, 102, 102));
         jPasswordFieldPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordFieldPassword.setCaretColor(new java.awt.Color(255, 255, 255));
         jPasswordFieldPassword.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jPasswordFieldPassword.setSelectionColor(new java.awt.Color(255, 255, 255));
         jPasswordFieldPassword.addActionListener(new java.awt.event.ActionListener() {
