@@ -1,6 +1,7 @@
 package tokolaptop.views;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.io.FileWriter;
@@ -11,6 +12,7 @@ import tokolaptop.controllers.LaptopController;
 import javax.swing.*;
 import java.util.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellEditor;
@@ -83,7 +85,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         @Override
         public void focusLost(java.awt.event.FocusEvent evt) {
             if (jTextFieldCari.getText().isEmpty()) {
-                jTextFieldCari.setText("Username");
+                jTextFieldCari.setText("Cari laptop");
                 jTextFieldCari.setForeground(Color.GRAY);
                 }
             }
@@ -91,7 +93,51 @@ public class HalamanUtama extends javax.swing.JFrame {
         
         jScrollPane1.setOpaque(false);
         JTableHeader header = jTable1.getTableHeader();
-        header.setBackground(Color.red);
+        header.setFont(new Font("Gadugi", Font.BOLD, 18));
+        header.setBackground(Color.blue);
+        header.setForeground(Color.white);
+        jTable1.setRowHeight(30);
+        
+        final int[] hoveredRow = {-1};
+
+        // Tambahkan listener untuk mendeteksi pergerakan mouse di atas tabel
+        jTable1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            @Override
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                int row = jTable1.rowAtPoint(evt.getPoint());
+                if (row != hoveredRow[0]) {
+                    hoveredRow[0] = row;
+                    jTable1.repaint();  // refresh tampilan
+                    }
+                }
+            });
+
+        // Listener untuk saat mouse keluar dari tabel
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoveredRow[0] = -1;  // reset index baris
+                jTable1.repaint();
+                }
+            });
+
+        // Custom cell renderer untuk mewarnai baris yang sedang dihover
+        jTable1.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table,
+                    Object value, boolean isSelected, boolean hasFocus,
+                    int row, int column) {
+
+                Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+
+                if (row == hoveredRow[0]) {
+                    c.setBackground(new Color(204, 204, 204));  // warna latar baris hover
+                } else {
+                    c.setBackground(Color.WHITE);   // warna latar default
+                }
+                return c;
+            }
+        }); 
         
         
         jPanel2.setBorder(new javax.swing.border.AbstractBorder() {
@@ -372,6 +418,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jPanel1.setName(""); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextFieldCari.setForeground(java.awt.Color.gray);
         jTextFieldCari.setText("Cari laptop");
         jTextFieldCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -383,6 +430,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jScrollPane1.setColumnHeaderView(null);
         jScrollPane1.setRowHeaderView(null);
 
+        jTable1.setFont(new java.awt.Font("Gadugi", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -395,7 +443,9 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         ));
         jTable1.setCellSelectionEnabled(true);
+        jTable1.setGridColor(new java.awt.Color(102, 102, 102));
         jTable1.setShowGrid(false);
+        jTable1.setShowHorizontalLines(true);
         jTable1.getTableHeader().setResizingAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
